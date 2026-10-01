@@ -10,7 +10,7 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory website
 
 Open [localhost:4173](http://localhost:4173/).
 
-Click the header logo to switch between the two supplied candidates. Choice is stored only in your browser. The hero retains all six existing WebGL print animations, with a pause button and reduced-motion still.
+Click the header logo to switch between the two supplied candidates. Choice is stored only in your browser. The hero retains all six existing WebGL print animations and honors reduced-motion preferences.
 
 See [the style guide](../STYLE_GUIDE.md) for future page design, assets, typography, copy rules, and source references. Exact artwork prompts are in [image-prompts.md](../design/website-rebrand/round-02/image-prompts.md).
 

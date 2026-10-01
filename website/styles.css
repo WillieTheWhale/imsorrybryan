@@ -40,13 +40,6 @@ img { max-width: 100%; display: block; }
 #hero-canvas { display: block; position: absolute; width: 100%; height: 100%; inset: 0; z-index: 1; }
 .art-fallback { position: absolute; width: 100%; height: 100%; object-fit: cover; inset: 0; }
 .art-unavailable #hero-canvas { display: none; }
-.motion-toggle { position: absolute; bottom: 20px; right: var(--gutter); z-index: 2; width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid #172b3a55; border-radius: 50%; background: #ffffffcc; transition: background .15s; }
-.motion-toggle[hidden] { display: none; }
-.motion-toggle:hover { background: white; }
-.motion-toggle svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.5; }
-.motion-toggle .play-icon { display: none; }
-.motion-toggle[aria-pressed="true"] .pause-icon { display: none; }
-.motion-toggle[aria-pressed="true"] .play-icon { display: block; }
 .hero-copy { display: grid; grid-template-columns: 1.6fr 1fr; column-gap: 6vw; padding-top: 68px; padding-bottom: 76px; align-items: end; }
 h1 { font-weight: 900; text-transform: uppercase; font-size: clamp(36px, 4.7vw, 76px); line-height: .99; letter-spacing: -.025em; }
 .hero-intro { padding-bottom: 2px; }

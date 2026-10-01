@@ -8,7 +8,7 @@ function boot(reduced) {
   let now = 0;
   const events = new Map();
   const node = () => ({dataset:{},textContent:'',attrs:{},classList:{add(){}},setAttribute(k,v){this.attrs[k]=v},addEventListener(k,fn){events.set(this.id+':'+k,fn)}});
-  const nodes = Object.fromEntries(['#hero-canvas','#art-stage','#art-index','#art-title','#art-description','.motion-toggle'].map(id=>[id,Object.assign(node(),{id})]));
+  const nodes = Object.fromEntries(['#hero-canvas','#art-stage','#art-index','#art-title','#art-description'].map(id=>[id,Object.assign(node(),{id})]));
   const gl = new Proxy({}, {get(_,key){
     if (key==='getContextAttributes') return ()=>({stencil:true});
     if (key==='getShaderParameter'||key==='getProgramParameter') return ()=>true;
@@ -34,24 +34,24 @@ for(let i=0;i<6;i++){
  assert.equal(regular.nodes['#art-stage'].dataset.scene,String(i),'all six scenes remain available');
 }
 regular.setTime(5000);
-regular.events.get('.motion-toggle:click')();
+regular.events.get('preference')({matches:true});
 assert.equal(regular.engine.paused,true);
-assert.equal(regular.nodes['.motion-toggle'].attrs['aria-label'],'Play animation');
+assert.equal(regular.engine.reducedMotion,true);
+assert.equal(regular.nodes['#art-stage'].dataset.scene,'4');
 assert.equal(regular.engine.frozenFrame,120);
 regular.setTime(15000);
 regular.engine.resize();
-assert.equal(regular.engine.frozenFrame,120,'resize must keep a manually paused frame');
-regular.events.get('.motion-toggle:click')();
-assert.equal(regular.engine.currentFrame(),120,'resume continues from paused time');
+assert.equal(regular.engine.frozenFrame,120,'resize must keep a reduced-motion frame');
+regular.events.get('preference')({matches:false});
+assert.equal(regular.engine.currentFrame(),120,'animation resumes from its paused time');
 assert.equal(regular.engine.paused,false);
 const reduced=boot(true);
 assert.equal(reduced.engine.paused,true);
 assert.equal(reduced.nodes['#art-stage'].dataset.scene,'4','reduced motion opens on the Old Well still');
-assert.equal(reduced.nodes['.motion-toggle'].attrs['aria-label'],'Play animation');
-reduced.events.get('.motion-toggle:click')();
-assert.equal(reduced.engine.reducedMotion,false,'explicit play can opt into motion');
+reduced.events.get('preference')({matches:false});
+assert.equal(reduced.engine.reducedMotion,false);
 assert.equal(reduced.engine.paused,false);
 reduced.events.get('preference')({matches:true});
 assert.equal(reduced.engine.paused,true);
 assert.equal(reduced.nodes['#art-stage'].dataset.scene,'4');
-console.log('PASS: six scenes, pause/resume timing, paused resize, reduced-motion still, explicit play, and preference changes.');
+console.log('PASS: six scenes, reduced-motion still, paused resize, and preference changes.');

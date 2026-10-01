@@ -87,7 +87,7 @@ Maintain the header's height while comparing the two different aspect ratios. Th
 
 ## Motion and access
 
-Keep the existing shader, NC geometry, neural-network geometry, and print transitions. The animation pauses when offscreen or the document is hidden. Reduced-motion preference opens on the Old Well still. The small bottom-right button allows pausing or explicitly playing. Manual pause must preserve the current frame across resize and resume without jumping forward by elapsed paused time.
+Keep the existing shader, NC geometry, neural-network geometry, and print transitions. The animation pauses when offscreen or the document is hidden. Reduced-motion preference opens on the Old Well still. There is no visible pause control.
 
 If WebGL cannot initialize, show the static objective-landscape image. Links and page copy must work without JavaScript. Retain the skip link, semantic landmarks, sequential headings, descriptive link names, visible keyboard focus, image dimensions, and lazy loading below the hero.
 
@@ -111,6 +111,6 @@ Animation control regression checks:
 node website/tests/animation-controls.test.cjs
 ```
 
-The test stubs WebGL to check six-scene selection, pause/resume timing, resize while paused, reduced-motion startup, explicit play, and preference changes. Real WebGL rendering is checked in the browser. Also inspect desktop and phone layouts, logo toggle/persistence, keyboard use, asset loading, overflow, anchor links, and browser errors after changes.
+The test stubs WebGL to check six-scene selection, reduced-motion startup, resize while paused, and preference changes. Real WebGL rendering is checked in the browser. Also inspect desktop and phone layouts, logo toggle/persistence, keyboard use, asset loading, overflow, anchor links, and browser errors after changes.
 
 The active website is `website/`. The design directory retains only the current artwork prompts and the source script for the footer and risk icons.

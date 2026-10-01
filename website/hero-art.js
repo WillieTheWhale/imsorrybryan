@@ -485,18 +485,6 @@ try {
 }
 
 if (engine) {
-  const motionButton = document.querySelector(".motion-toggle");
-  const syncMotionButton = () => {
-    motionButton.hidden = false;
-    motionButton.setAttribute("aria-pressed", String(engine.paused));
-    motionButton.setAttribute("aria-label", engine.paused ? "Play animation" : "Pause animation");
-  };
-  syncMotionButton();
-  motionButton.addEventListener("click", () => {
-    engine.reducedMotion = false;
-    engine.setPaused(!engine.paused);
-    syncMotionButton();
-  });
   const resizeObserver = new ResizeObserver(() => engine.resize());
   resizeObserver.observe(stage);
   const intersection = new IntersectionObserver(([entry]) => {
@@ -520,6 +508,5 @@ if (engine) {
     engine.reducedMotion = event.matches;
     engine.setPaused(event.matches);
     if (event.matches) engine.render(4 * SCENE_FRAMES + STILL_FRAME);
-    syncMotionButton();
   });
 }
