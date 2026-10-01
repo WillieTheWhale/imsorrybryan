@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" fill="none">
+<defs><pattern id="ruling" width="72" height="4" patternUnits="userSpaceOnUse"><path d="M0 1H72" stroke="white" stroke-width="1.15"/></pattern><pattern id="ink" width="72" height="4" patternUnits="userSpaceOnUse"><path d="M0 3H72" stroke="#172b3a" stroke-width=".65"/></pattern></defs>
+<path fill="#172b3a" d="M0 0h72v72H0z"/><path fill="url(#ruling)" d="M0 0h72v72H0z"/><path d="M36 37 17 16m19 21 22-20M36 37 13 54m23-17 25 20" fill="none" stroke="white" stroke-width="5"/><g fill="white"><circle cx="36" cy="37" r="11"/><circle cx="16" cy="15" r="8"/><circle cx="58" cy="16" r="8"/><circle cx="13" cy="55" r="8"/><circle cx="60" cy="57" r="8"/></g><path fill="url(#ink)" d="M0 0h72v72H0z"/></svg>

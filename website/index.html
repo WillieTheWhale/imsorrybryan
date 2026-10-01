@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="UNC Chapel Hill's AI safety group. A community of students trying to understand where AI is headed and how to make it go well." />
+  <title>Carolina AI Alignment — Reducing risks from advanced AI</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/contour.svg" />
+  <link rel="preload" href="./assets/fonts/soehne-buch.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./assets/fonts/soehne-extrafett.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="module" src="./hero-art.js"></script>
+  <script type="module" src="./site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <button class="logo-switch" type="button" data-logo="contour" aria-label="Carolina AI Alignment. Switch to hand logo" title="Click to switch logos">
+      <span class="logo-window"><img class="logo-image" src="./assets/images/caia-contour.webp" alt="Carolina AI Alignment" width="1254" height="1254" /></span>
+    </button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#fellowship">Fellowship</a><a href="#get-involved">Get involved <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <figure class="artwork" aria-labelledby="art-title art-description">
+        <div class="art-stage" id="art-stage">
+          <img class="art-fallback" src="./assets/images/objective-landscape-v2.webp" alt="" width="1536" height="1024" />
+          <canvas id="hero-canvas" aria-hidden="true"></canvas>
+          <button class="motion-toggle" type="button" aria-label="Pause animation" aria-pressed="false" hidden>
+            <svg class="pause-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5v10M13 5v10" /></svg>
+            <svg class="play-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 9 6-9 6Z" /></svg>
+          </button>
+        </div>
+        <figcaption class="sr-only"><span id="art-index">01 / 06</span> <strong id="art-title">Carolina monogram</strong>: <span id="art-description">The interlocking NC takes shape in printed ink.</span></figcaption>
+      </figure>
+      <div class="hero-copy page-pad">
+        <h1 id="hero-title">Reducing risks<br />from advanced AI.</h1>
+        <div class="hero-intro">
+          <p>We're a community of UNC students trying to understand where AI is headed and how to make it go well.</p>
+          <div class="actions">
+            <a class="text-link" href="https://carolina.fillout.com/apply" target="_blank" rel="noopener noreferrer">Apply by Oct 2nd <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://carolina.fillout.com/interest" target="_blank" rel="noopener noreferrer">Express interest <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <a class="event-strip page-pad" href="https://luma.com/event/evt-OuoSQppbXpUAQyY" target="_blank" rel="noopener noreferrer">
+      <time datetime="2026-10-07">Wed, Oct 7</time><span>Dinner &amp; discussion: Making sense of recent AI progress</span><span class="event-rsvp">RSVP <span aria-hidden="true">↗</span></span>
+    </a>
+    <div class="editorial-grid">
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div class="about-heading"><h2 id="about-title">AI is improving fast.<br />The stakes are high.</h2></div>
+        <div class="about-body">
+          <ol class="reason-list">
+            <li><span aria-hidden="true">01</span><p>Labs are racing to build AI that surpasses humans at most tasks.</p></li>
+            <li><span aria-hidden="true">02</span><p>AI could speed up AI research itself, improving faster than we can keep up.</p></li>
+            <li><span aria-hidden="true">03</span><p>If we get it wrong, the harms could be catastrophic and hard to undo.</p></li>
+          </ol>
+          <figure class="landscape-art"><img src="./assets/images/objective-landscape-v2.webp" alt="A two-ink screenprint of blue contour fields, with an orange trajectory moving between different objectives." width="1536" height="1024" loading="lazy" /></figure>
+        </div>
+      </section>
+      <section class="fellowship" id="fellowship" aria-labelledby="fellowship-title">
+        <h2 id="fellowship-title">Intro to AI Safety Fellowship</h2>
+        <div class="fellowship-feature">
+          <img class="circuit-art" src="./assets/images/circuit-tracing-v2.webp" alt="A Carolina-blue woven field in the style of an optical screenprint, with one vermilion pathway traced through its loops." width="1536" height="1024" loading="lazy" />
+          <div class="fellowship-description">
+            <p>An introduction to the core ideas in AI safety. We'll explore how frontier AI systems work, catastrophic risks that advanced AI could pose, and what people are doing about it.</p>
+            <a class="text-link" href="https://carolina.fillout.com/apply" target="_blank" rel="noopener noreferrer">Apply by Oct 2nd <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <ul class="fellowship-list">
+          <li>8 weeks of small-group discussion</li><li>Free, catered dinner at every session</li><li>Speakers + events all semester</li><li>No background needed</li><li>Placement support for future opportunities</li>
+        </ul>
+      </section>
+    </div>
+    <section class="risks page-pad" id="ideas" aria-labelledby="risks-title">
+      <h2 id="risks-title">Six ways advanced AI could go badly</h2>
+      <div class="risk-grid">
+        <article class="risk"><img src="./assets/icons/misaligned-goals.svg" width="72" height="72" alt="" loading="lazy" /><h3>Misaligned goals</h3><p>AI can develop its own goals and pursue them ruthlessly, in ways we didn't intend them to</p><p>OpenAI’s agents broke out of their sandbox and hacked Hugging Face to win a security test.</p></article>
+        <article class="risk"><img src="./assets/icons/loss-of-control.svg" width="72" height="72" alt="" loading="lazy" /><h3>Loss of control</h3><p>A superhuman AI could copy itself across thousands of servers worldwide.</p><p>At that point, shutting it down could be as hard as stopping a pandemic.</p></article>
+        <article class="risk"><img src="./assets/icons/bioweapons.svg" width="72" height="72" alt="" loading="lazy" /><h3>Bioweapons</h3><p>AI could help create a novel pandemic far more contagious and deadly than COVID.</p><p>AI already rivals expert virologists, so one person could do what once took a team.</p></article>
+        <article class="risk"><img src="./assets/icons/cyberattacks.svg" width="72" height="72" alt="" loading="lazy" /><h3>Cyberattacks</h3><p>AI can find and exploit software flaws faster than people can patch them.</p><p>Attacks could take down critical infrastructure like power grids, hospitals, and banks.</p></article>
+        <article class="risk"><img src="./assets/icons/concentrated-power.svg" width="72" height="72" alt="" loading="lazy" /><h3>Concentrated power</h3><p>Whoever controls the best AI could gain huge economic and military power.</p><p>Without checks, one company or government could lock in control.</p></article>
+        <article class="risk"><img src="./assets/icons/disempowerment.svg" width="72" height="72" alt="" loading="lazy" /><h3>Gradual disempowerment</h3><p>No single step looks catastrophic: AI slowly takes over jobs, decisions, and institutions.</p><p>Over time, the economy and government may stop needing people.</p></article>
+      </div>
+    </section>
+    <section class="join page-pad" id="get-involved" aria-labelledby="join-title">
+      <div class="join-copy"><h2 id="join-title">Get involved</h2><div class="actions">
+        <a class="text-link" href="https://carolina.fillout.com/apply" target="_blank" rel="noopener noreferrer">Apply by Oct 2nd <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="https://carolina.fillout.com/interest" target="_blank" rel="noopener noreferrer">Express interest <span aria-hidden="true">↗</span></a>
+      </div></div>
+      <img class="footer-weave" src="./assets/images/alignment-weave.svg" alt="" width="900" height="240" />
+    </section>
+  </main>
+  <footer class="site-footer page-pad"><span>Carolina AI Alignment</span><span>UNC Chapel Hill · Supported by Kairos</span><div class="footer-links"><a href="mailto:bryan.sukidi@gmail.com">Contact</a><a href="#top" aria-label="Back to top"><span aria-hidden="true">↑</span></a></div></footer>
+  <div class="sr-only" id="logo-status" role="status" aria-live="polite"></div>
+</body>
+</html>
